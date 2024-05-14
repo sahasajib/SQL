@@ -1,0 +1,40 @@
+CREATE DATABASE test;
+CREATE DATABASE IF NOT EXISTS test;
+USE test;
+
+CREATE TABLE student(
+id INT PRIMARY KEY,
+name VARCHAR(50),
+age INT NOT NULL
+);
+
+INSERT INTO student VALUES(1, "SAJIB", 27);
+INSERT INTO student VALUES(2, "PURNI", 23);
+INSERT INTO student VALUES(3, "SOBUJ", 28);
+
+SELECT * FROM student;
+
+
+CREATE TABLE xyz(
+id INT PRIMARY KEY,
+name VARCHAR(50),
+salary INT NOT NULL
+);
+
+INSERT INTO xyz (id,name, salary) 
+VALUES
+(1, "adam", 2500),
+(2, "bob", 30000),
+(3, "casey", 40000);
+
+SELECT * FROM xyz;
+
+CREATE TABLE emp(
+	id INT,
+    salary INT DEFAULT 25000);
+    
+INSERT INTO emp (id) VALUES(101);
+INSERT INTO emp VALUES(102, 35400);
+
+SELECT * FROM emp;
+
